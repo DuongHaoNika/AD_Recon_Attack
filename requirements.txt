@@ -1,0 +1,5 @@
+impacket
+python-dotenv
+click
+ldap3
+dnspython
