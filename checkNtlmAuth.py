@@ -18,7 +18,6 @@ def check_ntlm_support(dc_ip, username, ntlm_hash):
 
 if __name__ == "__main__":
     dc_ip = os.getenv('dc-ip')
-    username = os.getenv('username')
+    username = os.getenv('username2')
     ntlm_hash = ":" + os.getenv('ntlm')
-
     check_ntlm_support(dc_ip, username, ntlm_hash)

@@ -41,7 +41,6 @@ def get_domain_controllers(domain_name):
         print(f"Error: {e}")
         return []
 
-# Thay 'duongquanghao110.it' bằng tên domain của bạn
 domain_name = os.getenv('domain')
 domain_controllers = get_domain_controllers(domain_name)
 

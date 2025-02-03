@@ -23,10 +23,12 @@ def cli():
              2. List all groups\n
              3. Get all users in group\n
              4. Get all computers\n
-             5. List all domain controllers
+             5. List all domain controllers\n
              6. Check Domain Controller support NTLM Authentication\n
-             7. Get OUs, GPO for OU
-             8. Get DNS Records
+             7. Get OUs, GPO for OU\n
+             8. Get DNS Records\n
+             9. Lists of services status\n
+             10. Check users with no password required
              """)
 @click.option("--use", type=int)
 def info(use, help="Recon mode"):
@@ -69,6 +71,18 @@ def info(use, help="Recon mode"):
         click.echo("------- Get DNS Records -------")
         try:
             subprocess.run(["python", "dns.py"], check=True)
+        except subprocess.CalledProcessError as e:
+            click.echo(f"Error: {e}")
+    elif use == 9:
+        click.echo("------- List services status -------")
+        try:
+            subprocess.run(["python", "service.py"], check=True)
+        except subprocess.CalledProcessError as e:
+            click.echo(f"Error: {e}")
+    elif use == 10:
+        click.echo("------- Check users with no password required -------")
+        try:
+            subprocess.run(["python", "userNotPwd.py"], check=True)
         except subprocess.CalledProcessError as e:
             click.echo(f"Error: {e}")
 

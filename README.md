@@ -1,4 +1,4 @@
-## Active Directory Attack Tool (version 1.1)
+## Active Directory Attack Tool (version 1.2)
 
 ### Usage:
 
@@ -27,6 +27,7 @@ __Features:__
 - List all GPOs, OUs, GPOs linked OUs
 - List all domain controllers
 - List all DNS Record
+- Lists services status (Kerberos, LDAP, SMB,...)
 - Check Domain Controller support with NTLM Hash
 - Scan GPO misconfiguration
 - Get NTLM Hash
