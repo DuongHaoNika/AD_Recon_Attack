@@ -5,7 +5,7 @@
 Clone this repository:
 
 ```
-git clone https://github.com/it-sec-vf/ads.git
+git clone https://github.com/DuongHaoNika/AD_Recon_Attack.git
 ```
 
 Install dependencies
